@@ -11,9 +11,7 @@ const ThemedText = ({ style, title = false, ...props }) => {
     <Text
       style={[{ color: textColor }, style]}
       {...props}
-    >
-      {...props.children}
-    </Text>
+    />
   )
 }
 
