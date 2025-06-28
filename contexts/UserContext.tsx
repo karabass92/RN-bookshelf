@@ -28,7 +28,8 @@ export function UserProvider({ children }) {
   }
 
   async function logout() {
-
+    await account.deleteSession("current")
+    setUser(null)
   }
 
   return (
@@ -39,5 +40,3 @@ export function UserProvider({ children }) {
     </UserContext.Provider>
   );
 }
-
-// Wrap the UserProvider component around the root layout stack
